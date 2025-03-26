@@ -1,0 +1,674 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Flexbox utility class */
+.flex {
+    display: flex;
+}
+
+/* hidden utility class */
+.hidden {
+    display: none !important;
+}
+
+/* Horizontal padding utility class */
+.x-pad{
+    padding: 0 75px 0 75px;
+}
+
+/* CTA button */
+.cta-btn {
+    padding: 1rem 2.5rem;
+    background-color: hsl(48, 100%, 42%);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* call-to-action section */
+.cta {
+    height: 100px;
+    background-color: #1B2A4E;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta span {
+    color: red;
+    font-weight: bolder;
+}
+
+/* footer CTA */
+.footer__cta{
+    justify-content: center;
+    align-items: center;
+    background-color: #d6ab00;
+    height: 75px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Increase font size slightly */
+    font-weight: 600; /* Make text bolder for better emphasis */
+}
+
+.footer__cta:hover {
+    background-color: #c49000; /* Darker shade of the original color */
+}
+
+/* Navbar styles */
+.nav {
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.nav_logo {
+    height: 100px;
+    width: 150px;
+    background-color: red;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 0 0 4rem;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #FFCC00; /* CAT Yellow */
+}
+
+/* Hero section */
+.hero {
+    width: 100%;
+    height: calc(100vh - 200px); /* Full screen minus navbar */
+    background: url('images/hero.jpeg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0.09); /* Semi-transparent black overlay for contrast */
+}
+
+/* Content container */
+.hero__content {
+    position: relative;
+    max-width: 800px; /* Ensures text doesn't stretch too wide */
+    padding: 0 20px;
+}
+
+
+.hero__content h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif; /* Luxurious font */
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #FFF; /* White text for high contrast */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
+}
+
+
+.hero__content p {/* Subheading styling */
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    color: #E5E5E5; /* Softer white-gray */
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9; /* Slight transparency */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow to separate from background */
+}
+
+.hero__content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section styling */
+.section {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    /* height: 100vh; */
+}
+
+.section h1 {
+    text-align: center;
+    padding-bottom: 75px;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.section-dark {
+    background-color: #1B2A4E;
+    color: white;
+}
+
+.section-light {
+    background-color: white;
+    color: black;
+}
+
+/* Services grid */
+.services_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px; /* Increased spacing for elegance */
+    padding: 50px 10%;
+}
+
+/* Individual service item */
+.services_item {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* More space between icon & text */
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Luxury hover effect */
+.services_item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Refined icon */
+.services_icon {
+    width: 65px; /* Larger icon for prominence */
+    height: auto;
+    color: hsl(48, 100%, 42%); /* Apply gold color */
+    fill: hsl(48, 100%, 42%); /* Works for inline SVG icons */
+}
+
+/* Elegant text */
+.services_text {
+    font-size: 1.2rem; /* Slightly larger for readability */
+    font-family: 'Playfair Display', serif; /* Luxury serif font */
+    color: #E5E5E5; /* Light gray text for a softer contrast */
+    max-width: 450px; /* Better readability */
+    line-height: 1.6; /* Elegant spacing */
+}
+
+/* Review section */
+.review-section_left {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-section_right {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    background: url('images/happy-client.webp') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.review-section_title {
+    font-size: 2rem;
+    color: white; /* White text for high contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.review-section_text {
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1.6;
+    color: #333; /* Adjust color for readability */
+}
+
+/* Optional overlay for review section */
+.review-section_right__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.098); /* Semi-transparent black overlay for contrast */
+}
+
+.review-card {
+    max-width: 500px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 25px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    border-left: 5px solid #0057b4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.review-card__text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.review-card__author {
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #7e7e7e;
+    margin: 5px 15px 5px 0;
+}
+
+.review-card__rating {
+    font-size: 1.2rem;
+    text-align: left;
+    color: #FFD700;
+}
+
+/* FAQ Container */
+.faq-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.faq__wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    row-gap: 50px;
+}
+
+/* FAQ Card */
+.faq-container__card {
+    background-color: #0057b4;
+    width: auto;
+    padding: 40px;
+    border-radius: 2px;
+    flex-direction: column;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.faq-container__card:hover{
+    background-color: #005dc0;
+}
+
+/* Wrapper for Number and Question */
+.faq-container__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Number */
+.faq-container__number {
+    font-size: 1.5rem;
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+/* Question */
+.faq-container__question {
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Expand Icon */
+.faq-container__expand-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease, box-shadow 0.3s ease; /* Smooth animation for transform, color, and shadow */
+    color: #ffffff; /* Subtle blue color for the icon (Material Design Blue) */
+}
+
+.faq-container__expand-icon:hover {
+    color: #e5e5e5; /* Slightly darker blue on hover */
+}
+
+/* Hidden Text (Initially Hidden) */
+.faq-container__expand-text {
+    display: none; /* Hidden by default */
+    padding: 40px 0;
+}
+
+/* When active, show the text */
+.faq-container__card.active .faq-container__expand-text {
+    display: block;
+}
+
+/* Active State for Card */
+.faq-container__card.active .faq-container__expand-icon {
+    transform: rotate(180deg); /* Optional: Rotate the icon when expanded */
+}
+
+/* Contact Us Section */
+.contact-us__header{
+    background: url('images/contact-us.jpg') center/cover no-repeat;
+    background-position: 50% 30%; /* 50% horizontally, 10% from the top */
+    width: 100%;
+    height: 200px;
+    color: white;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us__header h2{
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif; /* Luxurious font */
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #FFF; /* White text for high contrast */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.85); /* Adds shadow for readability */
+
+}
+
+.contact__container{
+    justify-content: space-between;
+}
+
+/* Contact Information Section */
+.contact__info {
+    background-color: #f1f1f1; /* Light background for contrast */
+    padding: 30px;
+    border-radius: 4px; /* Soft rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow to lift the container */
+    border-left: 5px solid #0057b4;
+    width: clamp(300px,48%,600px);
+}
+
+/* Title Styling */
+.contact__title {
+    font-size: 2rem;
+    font-weight: 500; /* Slightly lighter weight than bold for a modern feel */
+    color: #333; /* Material Design Dark text */
+    margin-bottom: 10px;
+}
+
+/* Paragraph Text Styling */
+.contact__text {
+    font-size: 1.1rem;
+    color: #666; /* Subtle grey for text */
+    margin-bottom: 20px;
+}
+
+/* List Styling */
+.contact__list {
+    list-style-type: none; /* Remove default list style */
+    padding: 0;
+    margin: 0;
+}
+
+.contact__item {
+    font-size: 1.2rem;
+    color: #444; /* Dark grey text */
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.contact__item:hover {
+    color: #2196F3; /* Google Material Blue color on hover */
+    transform: translateX(5px); /* Subtle movement to the right */
+}
+
+.contact__item i {
+    margin-right: 10px; /* Space between the icon and text */
+}
+
+/* Google Material Design Icon styling for contact items */
+.contact__item i {
+    font-size: 1.5rem; /* Make the icons a bit larger */
+    color: #2196F3; /* Use Material Design Blue for the icons */
+}
+
+/* Contact Form Container */
+.contact__form {
+    background-color: #ffffff; /* White background for the form */
+    width: 500px;
+    padding: 40px;
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow to elevate the form */
+    max-width: 600px;
+    /* margin: 0 auto; */
+}
+
+/* Form Field Styling */
+.contact__field {
+    margin-bottom: 20px; /* Spacing between form fields */
+}
+
+/* Label Styling */
+.contact__label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333; /* Dark text color for labels */
+    display: block;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Input Fields Styling */
+.contact__input,
+.contact__textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc; /* Light border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f9f9f9; /* Slight background color */
+    color: #333; /* Dark text */
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus Effect for Input Fields */
+.contact__input:focus,
+.contact__textarea:focus {
+    border-color: #2196F3; /* Material Blue border on focus */
+    background-color: #fff; /* White background on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Textarea Styling */
+.contact__textarea {
+    resize: vertical; /* Allow vertical resizing */
+    height: 150px; /* Set a default height for the textarea */
+}
+
+/* Button Styling */
+.contact__button {
+    background-color: #2196F3; /* Material Blue button */
+    color: #fff; /* White text color */
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.contact__button:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+
+/* Focus effect on button */
+.contact__button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.5); /* Subtle outline when focused */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #1B2A4E; /* Primary color from Material Design */
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Content Section */
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Individual Section */
+.footer__section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+/* Footer Headings */
+.footer__heading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* Footer Text */
+.footer__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Links List */
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__item {
+    margin-bottom: 10px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+    color: #FFCC00; /* CAT Yellow */
+}
+
+/* Bottom Footer */
+.footer__bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Footer Copyright */
+.footer__copy {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__list--social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__link {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+    color: #FFCC00;
+}
+
+.footer__item svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* Inherits the color of the link */
+}
+
+
+/* === Responsive styles === */
+
+/* Mobile (max-width: 414px) */
+@media screen and (max-width: 414px) {
+    
+}
+
+/* Tablet (min-width: 415px) and (max-width: 834px) */
+@media screen and (min-width: 415px) and (max-width: 834px) {
+    
+}
+
+/* Desktop (min-width: 835px) */
+@media screen and (min-width: 835px) {
+    
+}
+
+
+
+
